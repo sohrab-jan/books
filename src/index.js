@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.css";
 import {DevSupport} from "@react-buddy/ide-toolbox";
 import {ComponentPreviews, useInitial} from "./dev";
-// import 'font-awesome/css/font-awesome.css';
+import {BrowserRouter} from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -15,7 +15,9 @@ root.render(
             ComponentPreviews={ComponentPreviews}
             useInitialHook={useInitial}
         >
-            <App/>
+            <BrowserRouter>
+                <App/>
+            </BrowserRouter>
         </DevSupport>
     </React.StrictMode>
 );
